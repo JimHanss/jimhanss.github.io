@@ -19,57 +19,67 @@ export type ContactLink = {
   href: string
 }
 
+export type Expertise = {
+  title: string
+  description: string
+  tags: string[]
+}
+
+export type Stat = {
+  label: string
+  value: string
+}
+
 export const profile = {
   name: 'Jim Hanss',
   handle: 'JimHanss',
-  title: '前端开发者 / Full-stack Builder',
+  title: 'Front-end Developer / Full-stack Builder',
   location: 'China',
   avatarUrl: 'https://github.com/JimHanss.png',
+  intro:
+    'I build clean, fast, and maintainable web experiences with React, TypeScript, and modern frontend tooling.',
   summary:
-    '这里是一段可替换的个人简介。你可以用它介绍自己的技术方向、工作经历、开源贡献，或正在构建的产品。',
-  highlights: [
-    '专注 React、TypeScript 与现代 Web 工程化',
-    '重视清晰的交互体验、可维护组件和自动化部署',
-    '持续整理个人项目，把想法做成可运行的作品',
-  ],
-  skills: [
-    'React',
-    'TypeScript',
-    'Vite',
-    'Node.js',
-    'CSS',
-    'GitHub Actions',
-    'API Design',
-    'Product Thinking',
-  ],
-  experiences: [
+    'This portfolio is a living space for projects, experiments, and notes. Replace the placeholder copy with your real background, product work, open-source contributions, and contact details when ready.',
+  availability: 'Open to selected collaborations',
+  stats: [
+    { label: 'Focus', value: 'Product UI' },
+    { label: 'Stack', value: 'React + TS' },
+    { label: 'Shipping', value: 'GitHub Pages' },
+  ] satisfies Stat[],
+  expertise: [
     {
-      period: '2026 - Now',
-      title: '个人项目与开源实践',
+      title: 'Interface Engineering',
       description:
-        '把常用工具、实验性应用和学习成果整理为可展示、可维护的项目。',
+        'Build responsive interfaces with clear component boundaries, predictable state, and accessible interaction patterns.',
+      tags: ['React', 'TypeScript', 'CSS'],
     },
     {
-      period: '2024 - 2025',
-      title: 'Web 应用开发',
+      title: 'Frontend Tooling',
       description:
-        '围绕业务流程、数据展示和前端工程效率构建稳定的用户界面。',
+        'Set up lean project workflows around Vite, automated builds, GitHub Actions, and production deployment.',
+      tags: ['Vite', 'GitHub Actions', 'CI'],
     },
-  ] satisfies Experience[],
+    {
+      title: 'Product Thinking',
+      description:
+        'Turn project ideas into usable screens, focusing on hierarchy, content clarity, and repeatable user flows.',
+      tags: ['UX', 'Prototyping', 'Docs'],
+    },
+  ] satisfies Expertise[],
   projects: [
     {
       name: 'Portfolio Website',
       description:
-        '基于 React 与 Vite 构建的个人主页，用于集中展示个人信息、技能与项目作品。',
+        'A personal homepage built with React and Vite to present profile information, technical direction, and project work.',
       techStack: ['React', 'TypeScript', 'Vite', 'CSS'],
-      status: 'In Progress',
+      status: 'Live',
       githubUrl: 'https://github.com/JimHanss/jimhanss.github.io',
       demoUrl: 'https://jimhanss.github.io/',
     },
     {
       name: 'Project Showcase',
       description:
-        '项目展示占位条目。后续可以替换为真实仓库、在线演示和更完整的技术说明。',
+        'A placeholder project entry for a future repository, product experiment, or case study with richer technical notes.',
       techStack: ['TypeScript', 'Automation', 'GitHub'],
       status: 'Draft',
       githubUrl: 'https://github.com/JimHanss',
@@ -78,13 +88,27 @@ export const profile = {
     {
       name: 'Learning Notes',
       description:
-        '用于沉淀学习笔记和实践记录的内容项目，适合展示持续学习和工程思考。',
+        'A future content space for engineering notes, implementation records, and lessons learned from hands-on practice.',
       techStack: ['Markdown', 'Web', 'Docs'],
       status: 'Planned',
       githubUrl: 'https://github.com/JimHanss',
       demoUrl: 'https://jimhanss.github.io/',
     },
   ] satisfies Project[],
+  experiences: [
+    {
+      period: '2026 - Now',
+      title: 'Personal Projects & Open Practice',
+      description:
+        'Organizing useful tools, experimental apps, and learning outcomes into visible, maintainable projects.',
+    },
+    {
+      period: '2024 - 2025',
+      title: 'Web Application Development',
+      description:
+        'Building stable user interfaces around business workflows, data presentation, and frontend engineering efficiency.',
+    },
+  ] satisfies Experience[],
   contacts: [
     {
       label: 'GitHub',
