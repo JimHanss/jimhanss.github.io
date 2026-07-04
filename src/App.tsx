@@ -1,3 +1,4 @@
+import { useEffect, useState, type CSSProperties } from 'react'
 import { profile } from './data/profile'
 
 const navItems = [
@@ -8,14 +9,85 @@ const navItems = [
   { number: '05', label: 'contact', href: '#contact' },
 ]
 
+type RevealStyle = CSSProperties & {
+  '--reveal-delay'?: string
+}
+
+const revealDelay = (index = 0): RevealStyle => ({
+  '--reveal-delay': `${Math.min(index * 80, 360)}ms`,
+})
+
 function App() {
+  const [navState, setNavState] = useState({ isSticky: false, isShown: false })
+
+  useEffect(() => {
+    const updateHeaderState = () => {
+      const scrollTop = window.scrollY
+
+      setNavState({
+        isSticky: scrollTop > 250,
+        isShown: scrollTop > 300,
+      })
+    }
+
+    updateHeaderState()
+    window.addEventListener('scroll', updateHeaderState, { passive: true })
+    window.addEventListener('resize', updateHeaderState)
+
+    return () => {
+      window.removeEventListener('scroll', updateHeaderState)
+      window.removeEventListener('resize', updateHeaderState)
+    }
+  }, [])
+
+  useEffect(() => {
+    const revealItems = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-reveal]'),
+    )
+
+    if (!revealItems.length) {
+      return undefined
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'))
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return
+          }
+
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        })
+      },
+      {
+        rootMargin: '0px 0px -12% 0px',
+        threshold: 0.14,
+      },
+    )
+
+    revealItems.forEach((item) => observer.observe(item))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <main className="site-shell">
       <div className="scroll-meter" aria-hidden="true">
         <span>57%</span>
       </div>
 
-      <header className="topbar" aria-label="Primary navigation">
+      <header
+        className={`topbar${navState.isSticky ? ' is-sticky' : ''}${
+          navState.isShown ? ' is-shown' : ''
+        }`}
+        aria-label="Primary navigation"
+      >
         <a className="brand-mark" href="#home" aria-label={`${profile.name} home`}>
           {profile.handle}<span>._</span>
         </a>
@@ -67,7 +139,12 @@ function App() {
           <h2 id="expertise-title">Software development with frontend precision.</h2>
           <div className="expertise-list">
             {profile.expertise.map((item, index) => (
-              <article className="expertise-item" key={item.title}>
+              <article
+                className="expertise-item"
+                data-reveal
+                key={item.title}
+                style={revealDelay(index)}
+              >
                 <span className="item-index">
                   {String(index + 1).padStart(2, '0')}
                 </span>
@@ -83,7 +160,7 @@ function App() {
               </article>
             ))}
           </div>
-          <blockquote className="code-quote">
+          <blockquote className="code-quote" data-reveal>
             <span>const principle =</span>
             <strong>"Ship simple, readable interfaces that stay easy to change."</strong>
           </blockquote>
@@ -101,7 +178,7 @@ function App() {
               <h2 id="work-title">Selected scalable web projects and experiments.</h2>
               <p>{profile.summary}</p>
             </div>
-            <aside className="featured-project">
+            <aside className="featured-project" data-reveal>
               <p>Featured Project</p>
               <h3>{profile.projects[0].name}</h3>
               <a href={profile.projects[0].demoUrl} target="_blank" rel="noreferrer">
@@ -116,8 +193,13 @@ function App() {
             <a href="#work">Automation</a>
           </div>
           <div className="project-list">
-            {profile.projects.map((project) => (
-              <article className="project-row" key={project.name}>
+            {profile.projects.map((project, index) => (
+              <article
+                className="project-row"
+                data-reveal
+                key={project.name}
+                style={revealDelay(index)}
+              >
                 <div className="project-main">
                   <div className="project-heading">
                     <h3>{project.name}</h3>
@@ -158,8 +240,13 @@ function App() {
         <div className="section-content">
           <h2 id="experience-title">A compact record of engineering practice.</h2>
           <div className="timeline">
-            {profile.experiences.map((experience) => (
-              <article className="timeline-item" key={experience.title}>
+            {profile.experiences.map((experience, index) => (
+              <article
+                className="timeline-item"
+                data-reveal
+                key={experience.title}
+                style={revealDelay(index)}
+              >
                 <p>{experience.period}</p>
                 <div>
                   <h3>{experience.title}</h3>
@@ -179,8 +266,13 @@ function App() {
           clean frontend implementation?
         </p>
         <address className="contact-list">
-          {profile.contacts.map((contact) => (
-            <a href={contact.href} key={contact.label}>
+          {profile.contacts.map((contact, index) => (
+            <a
+              data-reveal
+              href={contact.href}
+              key={contact.label}
+              style={revealDelay(index)}
+            >
               <span>{contact.label}</span>
               {contact.value}
             </a>

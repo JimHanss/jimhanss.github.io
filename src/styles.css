@@ -59,7 +59,7 @@ a {
 }
 
 .topbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 15;
@@ -70,6 +70,60 @@ a {
   align-items: center;
   padding: 48px 44px 20px;
   background: linear-gradient(180deg, rgba(18, 26, 31, 0.96), rgba(18, 26, 31, 0));
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    background 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 460ms ease,
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity, padding, background;
+}
+
+.topbar.is-sticky {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 8px 32px 14px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(42, 47, 49, 0.82) 22%,
+      rgba(42, 47, 49, 0.82) 78%,
+      transparent 100%
+    );
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -100%, 0);
+  transition: none;
+}
+
+.topbar.is-sticky.is-shown {
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.topbar.is-sticky .brand-mark {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, -18px, 0);
+}
+
+.topbar.is-sticky .nav-links {
+  justify-content: center;
+  gap: 42px;
 }
 
 .brand-mark {
@@ -78,6 +132,9 @@ a {
   font-size: 1.7rem;
   font-weight: 900;
   letter-spacing: 0;
+  transition:
+    opacity 420ms ease,
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .brand-mark span {
@@ -89,6 +146,9 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 34px;
+  transition:
+    gap 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-links a {
@@ -110,6 +170,15 @@ a {
 
 .nav-links a:hover {
   color: #7beaff;
+}
+
+.topbar.is-sticky .nav-links a {
+  color: #75eaff;
+  text-shadow: 0 0 14px rgba(117, 234, 255, 0.18);
+}
+
+.topbar.is-sticky .nav-links a span {
+  color: rgba(117, 234, 255, 0.72);
 }
 
 .hero-section {
@@ -596,11 +665,69 @@ h3 {
   text-transform: uppercase;
 }
 
+.expertise-item[data-reveal],
+.featured-project[data-reveal],
+.project-row[data-reveal],
+.timeline-item[data-reveal],
+.code-quote[data-reveal],
+.contact-list a[data-reveal] {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translate3d(0, 38px, 0) scale(0.985);
+  transition:
+    opacity 680ms cubic-bezier(0.4, 0, 0.2, 1) var(--reveal-delay, 0ms),
+    filter 680ms cubic-bezier(0.4, 0, 0.2, 1) var(--reveal-delay, 0ms),
+    transform 680ms cubic-bezier(0.4, 0, 0.2, 1) var(--reveal-delay, 0ms),
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 680ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, filter, transform;
+}
+
+.expertise-item[data-reveal].is-visible,
+.featured-project[data-reveal].is-visible,
+.project-row[data-reveal].is-visible,
+.timeline-item[data-reveal].is-visible,
+.code-quote[data-reveal].is-visible,
+.contact-list a[data-reveal].is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar,
+  .topbar.is-sticky.is-shown,
+  .expertise-item[data-reveal],
+  .featured-project[data-reveal],
+  .project-row[data-reveal],
+  .timeline-item[data-reveal],
+  .code-quote[data-reveal],
+  .contact-list a[data-reveal] {
+    transition: none;
+  }
+
+  .expertise-item[data-reveal],
+  .featured-project[data-reveal],
+  .project-row[data-reveal],
+  .timeline-item[data-reveal],
+  .code-quote[data-reveal],
+  .contact-list a[data-reveal] {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
 @media (max-width: 1040px) {
   .topbar {
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 26px 24px 18px;
+  }
+
+  .topbar.is-sticky {
+    padding: 10px 16px 14px;
   }
 
   .nav-links {
@@ -643,6 +770,11 @@ h3 {
 
   .topbar {
     position: absolute;
+  }
+
+  .topbar.is-sticky {
+    position: fixed;
+    background: rgba(18, 26, 31, 0.9);
   }
 
   .brand-mark {
