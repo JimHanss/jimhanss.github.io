@@ -1,0 +1,180 @@
+{
+  "navigation": [
+    { "number": "01", "label": "home", "href": "#home" },
+    { "number": "02", "label": "skills", "href": "#expertise" },
+    { "number": "03", "label": "work", "href": "#work" },
+    { "number": "04", "label": "experience", "href": "#experience" },
+    { "number": "05", "label": "contact", "href": "#contact" }
+  ],
+  "profile": {
+    "name": "Jim Huang",
+    "handle": "黄志君",
+    "brandSuffix": "._",
+    "title": "前端开发 / AI Agent 全栈开发",
+    "location": "深圳 / 珠海",
+    "avatarUrl": "/avatar-snail.png",
+    "intro": "5 年前端开发经验，熟悉 React、TypeScript、Vue、React Native、Web3 与 AI-assisted Software Engineering，能独立负责前端项目从 0 到 1 搭建、上线与持续优化。",
+    "summary": "我长期负责复杂业务系统的前端架构、性能治理、权限体系、工程化与跨端适配，并积极将 Cursor、Claude Code、Codex、MCP Server、Agent Skills、Spec-kit、OpenSpec 等 AI 工程能力融入全栈研发流程。",
+    "availability": "离职 - 随时到岗",
+    "stats": [
+      { "label": "姓名", "value": "黄志君 / Jim Huang" },
+      { "label": "经验", "value": "5 年" },
+      { "label": "意向", "value": "前端开发 / AI Agent 全栈" },
+      { "label": "英语", "value": "读写" },
+      { "label": "粤语", "value": "听说读写" }
+    ],
+    "expertise": [
+      {
+        "title": "前端核心能力",
+        "description": "熟练掌握 HTML5、CSS3、JavaScript、TypeScript 以及 ES6+ 特性，能实现高性能响应式布局，覆盖移动端、PC 端与大屏适配。",
+        "tags": ["HTML5", "CSS3", "JavaScript", "TypeScript", "Responsive"]
+      },
+      {
+        "title": "React 生态",
+        "description": "精通 React、Redux、Hooks、React Router，具备独立负责 React 项目从 0 到 1 搭建、上线与长期维护经验，并熟练使用 Next.js 与 React Native。",
+        "tags": ["React", "Redux", "Hooks", "Next.js", "React Native"]
+      },
+      {
+        "title": "Vue 生态",
+        "description": "熟练使用 Vue2、Vue3、Vuex、Pinia，能结合业务场景完成状态管理、组件拆分、页面交互与工程化落地。",
+        "tags": ["Vue2", "Vue3", "Vuex", "Pinia"]
+      },
+      {
+        "title": "AI Agent 工程",
+        "description": "熟悉 Cursor、Claude Code、Codex 等 AI 辅助工具，掌握 MCP Server、Agent Skills 的开发发布，以及 Vibe Coding、SDD、Harness Engineering 等工作模式。",
+        "tags": ["Codex", "MCP Server", "Agent Skills", "Spec-kit"]
+      },
+      {
+        "title": "工程化与质量",
+        "description": "掌握 Vite、ESLint、Prettier、SonarLint、调试工具、性能评估与优化，熟悉 Jenkins、Azure Pipeline、Vercel 等 CI/CD 流程。",
+        "tags": ["Vite", "Performance", "CI/CD", "SonarLint"]
+      },
+      {
+        "title": "Web3 与设计协作",
+        "description": "熟练使用 Solidity、ethers.js 与 React 开发 Web3 项目进行链上交互，具备 Solana NFT 项目经验；熟悉 Figma、Zeplin、Git、SourceTree。",
+        "tags": ["Solidity", "ethers.js", "Solana", "Figma"]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Digital Ward Place App",
+        "description": "基于 React + Redux + React Router + Material UI 的病房管理系统。负责前端从 0 到 1 设计研发与长期治理，实现角色动态路由、权限渲染、axios 鉴权/Token 续期/错误码/请求节流、react-virtualized 长列表优化、D3 床位平面图拖拽碰撞与自动避让，并通过轮询缓存、BroadcastChannel 多标签同步、服务健康检查与版本检测提升线上稳定性。产品上线运营 4 年，平均每家医院管理约 80 间病房、1000 张床位，日活约 3500 到 5500。",
+        "techStack": ["React", "Redux", "Material UI", "D3", "Performance"],
+        "status": "Production",
+        "githubUrl": "",
+        "demoUrl": ""
+      },
+      {
+        "name": "AI-assisted Full-stack Workflow",
+        "description": "在全栈项目中探索并落地 AI-assisted Software Engineering 工作流，使用 Claude Code 辅助需求分析、架构拆解、代码实现、测试验证与文档维护，提升复杂项目的开发效率与一致性。",
+        "techStack": ["Claude Code", "Codex", "Spec-kit", "MCP", "Full-stack"],
+        "status": "2025-2026",
+        "githubUrl": "",
+        "demoUrl": ""
+      },
+      {
+        "name": "Hong Kong Move On NFT x School Mural AR",
+        "description": "使用 Node.js、Koa、axios、solana/web3.js、metaplex-foundation/js 实现 Solana NFT 项目的区块链交互逻辑。",
+        "techStack": ["Node.js", "Koa", "Solana", "Metaplex"],
+        "status": "Web3",
+        "githubUrl": "",
+        "demoUrl": ""
+      },
+      {
+        "name": "HK Blood App & DApps Demo",
+        "description": "负责 React Native 项目注册登录模块与全局权限重构；同时使用 Solidity 编写智能合约及代理合约，结合 React 与 Vercel 实现 DApps demo。",
+        "techStack": ["React Native", "Solidity", "React", "Vercel"],
+        "status": "Delivered",
+        "githubUrl": "",
+        "demoUrl": ""
+      }
+    ],
+    "experiences": [
+      {
+        "period": "2025-10 ~ 2026-06",
+        "title": "白星(深圳)网络科技有限公司 / AI 全栈开发工程师 / 深圳",
+        "description": "探索并落地 AI-assisted Software Engineering 工作流，使用 Claude Code 辅助需求分析、架构拆解、代码实现、测试验证与文档维护，提升复杂全栈项目的开发效率与一致性。"
+      },
+      {
+        "period": "2021-07 ~ 2025-09",
+        "title": "创奇思科技有限公司 / Frontend Senior Web Developer / 珠海",
+        "description": "负责 Digital Ward Place App 等业务系统的前端架构、性能优化、权限体系、复杂交互与长期维护；参与 NFT、React Native、Web3 DApps 等项目，并与 UI 设计师协作高保真还原设计稿。"
+      },
+      {
+        "period": "2019-09 ~ 2021-06",
+        "title": "吉林大学珠海学院 / 软件工程",
+        "description": "本科教育背景，学信网可查。"
+      },
+      {
+        "period": "2014-09 ~ 2017-06",
+        "title": "韩山师范学院 / 计算机应用技术",
+        "description": "专科教育背景，学信网可查。"
+      }
+    ],
+    "contacts": [
+      {
+        "label": "Phone / WeChat",
+        "value": "13257569198",
+        "href": "tel:13257569198"
+      },
+      {
+        "label": "Email",
+        "value": "jim.zh.huang@gmail.com",
+        "href": "mailto:jim.zh.huang@gmail.com"
+      },
+      {
+        "label": "Portfolio",
+        "value": "jimhanss.github.io",
+        "href": "https://jimhanss.github.io/"
+      },
+      {
+        "label": "GitHub",
+        "value": "github.com/JimHanss",
+        "href": "https://github.com/JimHanss"
+      }
+    ]
+  },
+  "hero": {
+    "kickerPrefix": "求职状态:",
+    "primaryAction": { "label": "查看项目", "href": "#work" },
+    "secondaryAction": { "label": "联系我", "href": "#contact" },
+    "identityPanel": {
+      "ariaLabel": "Profile summary"
+    },
+    "stackAriaLabel": "Technology stack",
+    "stack": ["React", "TypeScript", "Vue", "Next.js", "React Native", "AI Agent", "MCP", "Solidity"],
+    "scrollCueLabel": "Scroll to skills"
+  },
+  "sections": {
+    "expertise": {
+      "number": "01",
+      "label": "Professional Skills",
+      "title": "前端基础、React / Vue 生态与 AI Agent 实践。",
+      "description": "技能按基础能力、React 生态、Vue 生态、AI 工程、工程质量与 Web3 协作拆分，便于快速判断技术匹配度。",
+      "quotePrefix": "Personal Strengths",
+      "quoteText": "前端开发能力强，能独立开发并上线；遇到问题能主动排查解决，持续阅读英文官方文档并积极拥抱 AI 全栈开发。"
+    },
+    "work": {
+      "number": "02",
+      "label": "Selected Work",
+      "title": "复杂业务系统、AI 工程流与跨技术栈项目。",
+      "featuredLabel": "Featured Project",
+      "featuredLinkLabel": "查看作品",
+      "scopesLabel": "Project scopes",
+      "scopes": ["Frontend Architecture", "AI Engineering", "Mobile", "Web3"],
+      "githubLinkLabel": "GitHub",
+      "demoLinkLabel": "作品"
+    },
+    "experience": {
+      "number": "03",
+      "label": "Experience & Education",
+      "title": "5 年前端开发经验与软件工程背景。",
+      "description": "经历覆盖 AI 全栈开发、医疗业务系统、React Native、Web3 与设计协作；教育背景包含软件工程与计算机应用技术。"
+    },
+    "contact": {
+      "kicker": "04 / Contact",
+      "title": "离职随时到岗，欢迎联系。",
+      "copy": "意向职位：前端开发，具备 AI Agent 全栈开发经验。手机与微信同号，也可通过邮箱联系。"
+    }
+  }
+}
