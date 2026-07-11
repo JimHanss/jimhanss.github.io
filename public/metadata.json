@@ -10,16 +10,16 @@
     "name": "Jim Huang",
     "handle": "黄志君",
     "brandSuffix": "._",
-    "title": "前端开发 / AI Agent 全栈开发",
+    "title": "高级前端开发 / AI 全栈开发工程师",
     "location": "深圳 / 珠海",
     "avatarUrl": "/avatar-snail.png",
-    "intro": "5 年前端开发经验，熟悉 React、TypeScript、Vue、React Native、Web3 与 AI-assisted Software Engineering，能独立负责前端项目从 0 到 1 搭建、上线与持续优化。",
-    "summary": "我长期负责复杂业务系统的前端架构、性能治理、权限体系、工程化与跨端适配，并积极将 Cursor、Claude Code、Codex、MCP Server、Agent Skills、Spec-kit、OpenSpec 等 AI 工程能力融入全栈研发流程。",
+    "intro": "5 年前端开发经验，具备 AI 全栈开发实践，熟悉 React、TypeScript、Vue、React Native、Web3 与 AI-assisted Software Engineering；可独立负责项目从 0 到 1 搭建、上线与持续优化。",
+    "summary": "长期负责复杂业务系统的前端架构、性能治理、权限体系、工程化与跨端适配。近期完成基于 Next.js 15、PostgreSQL 与 Prisma 的全栈电商项目，并将 Claude Code、Codex、MCP Server、Agent Skills 与 Spec-Driven Development 融入完整研发流程。",
     "availability": "离职 - 随时到岗",
     "stats": [
       { "label": "姓名", "value": "黄志君 / Jim Huang" },
       { "label": "经验", "value": "5 年" },
-      { "label": "意向", "value": "前端开发 / AI Agent 全栈" },
+      { "label": "意向", "value": "前端开发 / AI 全栈" },
       { "label": "英语", "value": "读写" },
       { "label": "粤语", "value": "听说读写" }
     ],
@@ -41,50 +41,66 @@
       },
       {
         "title": "AI Agent 工程",
-        "description": "熟悉 Cursor、Claude Code、Codex 等 AI 辅助工具，掌握 MCP Server、Agent Skills 的开发发布，以及 Vibe Coding、SDD、Harness Engineering 等工作模式。",
-        "tags": ["Codex", "MCP Server", "Agent Skills", "Spec-kit"]
+        "description": "熟悉 Cursor、Claude Code、Codex 等 AI 辅助工具，掌握 MCP Server、Agent Skills 的开发发布，以及 Vibe Coding、SDD、Harness Engineering 等工作模式，可将 AI 用于需求、实现、测试与文档闭环。",
+        "tags": ["Claude Code", "Codex", "MCP Server", "Agent Skills", "Spec-kit"]
       },
       {
         "title": "工程化与质量",
-        "description": "掌握 Vite、ESLint、Prettier、SonarLint、调试工具、性能评估与优化，熟悉 Jenkins、Azure Pipeline、Vercel 等 CI/CD 流程。",
-        "tags": ["Vite", "Performance", "CI/CD", "SonarLint"]
+        "description": "掌握 Vite、ESLint、Prettier、SonarLint、Vitest、Playwright、Docker 与性能调试优化，熟悉 Jenkins、Azure Pipeline、Vercel 等 CI/CD 流程。",
+        "tags": ["Vite", "Vitest", "Playwright", "Docker", "CI/CD"]
       },
       {
         "title": "Web3 与设计协作",
-        "description": "熟练使用 Solidity、ethers.js 与 React 开发 Web3 项目进行链上交互，具备 Solana NFT 项目经验；熟悉 Figma、Zeplin、Git、SourceTree。",
-        "tags": ["Solidity", "ethers.js", "Solana", "Figma"]
+        "description": "熟练使用 Solidity、ethers.js 与 React 开发 Web3 项目进行链上交互，具备 Solana NFT 项目经验；熟悉 Figma、Zeplin、Git、SourceTree 与高保真设计还原。",
+        "tags": ["Solidity", "ethers.js", "Solana", "Figma", "Zeplin"]
       }
     ],
     "projects": [
+      {
+        "name": "DNALUMA",
+        "description": "面向 DNA 定制钻石与珠宝销售场景的全栈电商平台，覆盖商品展示、认证、购物车、订单、支付与用户中心。采用 Spec-Driven Development，基于 Next.js 15 App Router、PostgreSQL 与 Prisma 构建，落地 JWT + httpOnly Cookie 会话、支付宝/微信支付链路、Vitest/Playwright 测试与 Docker 化部署。",
+        "techStack": ["Next.js 15", "React", "Prisma", "PostgreSQL", "Vitest", "Playwright"],
+        "status": "AI Full-stack",
+        "githubUrl": "",
+        "demoUrl": ""
+      },
       {
         "name": "Digital Ward Place App",
         "description": "基于 React + Redux + React Router + Material UI 的病房管理系统。负责前端从 0 到 1 设计研发与长期治理，实现角色动态路由、权限渲染、axios 鉴权/Token 续期/错误码/请求节流、react-virtualized 长列表优化、D3 床位平面图拖拽碰撞与自动避让，并通过轮询缓存、BroadcastChannel 多标签同步、服务健康检查与版本检测提升线上稳定性。产品上线运营 4 年，平均每家医院管理约 80 间病房、1000 张床位，日活约 3500 到 5500。",
         "techStack": ["React", "Redux", "Material UI", "D3", "Performance"],
         "status": "Production",
         "githubUrl": "",
-        "demoUrl": ""
+        "demoUrl": "https://www3.ha.org.hk/ntec/NTECwhatsnew/news_193_e.asp"
       },
       {
-        "name": "AI-assisted Full-stack Workflow",
-        "description": "在全栈项目中探索并落地 AI-assisted Software Engineering 工作流，使用 Claude Code 辅助需求分析、架构拆解、代码实现、测试验证与文档维护，提升复杂项目的开发效率与一致性。",
-        "techStack": ["Claude Code", "Codex", "Spec-kit", "MCP", "Full-stack"],
-        "status": "2025-2026",
+        "name": "BMW Concessionaires App",
+        "description": "面向香港、澳门用户的汽车品牌服务平台。负责 ExcellentClub 高端会员权益模块，包括会员入口、权益展示、详情闭环、会员卡、活动资讯、接口联调，以及多角色与待激活等异常场景处理。",
+        "techStack": ["React Native", "React Navigation", "Axios", "Firebase", "i18n"],
+        "status": "Mobile",
         "githubUrl": "",
-        "demoUrl": ""
+        "demoUrl": "https://www.bmwhk.com/en/topics/fascination-bmw/bmw-conc-app.html"
       },
       {
-        "name": "Hong Kong Move On NFT x School Mural AR",
-        "description": "使用 Node.js、Koa、axios、solana/web3.js、metaplex-foundation/js 实现 Solana NFT 项目的区块链交互逻辑。",
-        "techStack": ["Node.js", "Koa", "Solana", "Metaplex"],
+        "name": "HK Blood App — Loyalty Programme",
+        "description": "医疗健康场景的移动端应用。负责登录系统重构与账号权限管理升级，统一传统账号、OTP、生物识别与 iAM Smart 登录流程，并完善 Access Token / Refresh Token 生命周期、API 鉴权和 401/403 异常处理。",
+        "techStack": ["React Native", "Redux", "Keycloak", "OTP", "reCAPTCHA"],
+        "status": "Healthcare",
+        "githubUrl": "",
+        "demoUrl": "https://www5.ha.org.hk/rcbts/dwp-user-guide"
+      },
+      {
+        "name": "Hong Kong Move On NFT × School Mural AR",
+        "description": "NFT 交易平台，打通 Web2 支付与 Web3 资产交付。负责技术选型、NFT 交易链路、订单和支付状态流转，以及 Node.js 服务端的 Mint、Transfer、钱包校验与回调能力。",
+        "techStack": ["React", "Node.js", "Koa", "Solana", "Metaplex", "Stripe"],
         "status": "Web3",
         "githubUrl": "",
         "demoUrl": ""
       },
       {
-        "name": "HK Blood App & DApps Demo",
-        "description": "负责 React Native 项目注册登录模块与全局权限重构；同时使用 Solidity 编写智能合约及代理合约，结合 React 与 Vercel 实现 DApps demo。",
-        "techStack": ["React Native", "Solidity", "React", "Vercel"],
-        "status": "Delivered",
+        "name": "iAM Smart CCIC Tablet App",
+        "description": "政务柜台身份办理系统，支持扫码联动手机端、证件 OCR、人工复核、人脸核验与主管二次确认。负责前端核心架构、流程配置化、登录与 OTP、二维码轮询、三语支持及稳定性保障。",
+        "techStack": ["React", "Redux Toolkit", "RTK Query", "Material UI", "i18n"],
+        "status": "Government",
         "githubUrl": "",
         "demoUrl": ""
       }
@@ -93,12 +109,12 @@
       {
         "period": "2025-10 ~ 2026-06",
         "title": "白星(深圳)网络科技有限公司 / AI 全栈开发工程师 / 深圳",
-        "description": "探索并落地 AI-assisted Software Engineering 工作流，使用 Claude Code 辅助需求分析、架构拆解、代码实现、测试验证与文档维护，提升复杂全栈项目的开发效率与一致性。"
+        "description": "探索并落地 AI-assisted Software Engineering 工作流，使用 Claude Code 完成需求分析、架构拆解、代码实现、测试验证与文档维护；负责 DNALUMA 全栈电商项目的架构设计与核心业务模块开发。"
       },
       {
         "period": "2021-07 ~ 2025-09",
         "title": "创奇思科技有限公司 / Frontend Senior Web Developer / 珠海",
-        "description": "负责 Digital Ward Place App 等业务系统的前端架构、性能优化、权限体系、复杂交互与长期维护；参与 NFT、React Native、Web3 DApps 等项目，并与 UI 设计师协作高保真还原设计稿。"
+        "description": "负责 Digital Ward Place App 等业务系统的前端架构、性能优化、权限体系、复杂交互与长期维护；交付 BMW、HK Blood、TIMS、iAM Smart、NFT 等 React Native、Web3 与医疗业务项目，并与 UI 设计师协作高保真还原设计稿。"
       },
       {
         "period": "2019-09 ~ 2021-06",
@@ -149,19 +165,19 @@
     "expertise": {
       "number": "01",
       "label": "Professional Skills",
-      "title": "前端基础、React / Vue 生态与 AI Agent 实践。",
-      "description": "技能按基础能力、React 生态、Vue 生态、AI 工程、工程质量与 Web3 协作拆分，便于快速判断技术匹配度。",
+      "title": "前端基础、React / Vue 生态与 AI 全栈实践。",
+      "description": "技能按基础能力、React 生态、Vue 生态、AI 工程、工程质量与 Web3 协作拆分，覆盖从产品实现到测试、部署的完整研发能力。",
       "quotePrefix": "Personal Strengths",
       "quoteText": "前端开发能力强，能独立开发并上线；遇到问题能主动排查解决，持续阅读英文官方文档并积极拥抱 AI 全栈开发。"
     },
     "work": {
       "number": "02",
       "label": "Selected Work",
-      "title": "复杂业务系统、AI 工程流与跨技术栈项目。",
+      "title": "AI 全栈电商、医疗业务与跨端 Web3 项目。",
       "featuredLabel": "Featured Project",
       "featuredLinkLabel": "查看作品",
       "scopesLabel": "Project scopes",
-      "scopes": ["Frontend Architecture", "AI Engineering", "Mobile", "Web3"],
+      "scopes": ["Full-stack", "Healthcare", "Mobile", "Web3"],
       "githubLinkLabel": "GitHub",
       "demoLinkLabel": "作品"
     },
